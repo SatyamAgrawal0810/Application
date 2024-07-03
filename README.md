@@ -18,7 +18,7 @@ Schema for api is
   "category":"Books"
 }
 
-note:- date can we writen less than or equal to actual date and category are only two Books and Movies.
+note:- date can we writen less than or equal to actual date and category are  Books and Movies.
 
 then you can check the implement of api
 all the api will check through postman application
