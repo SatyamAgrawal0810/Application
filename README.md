@@ -9,8 +9,20 @@ then type npm run start
 Database connected successully.
 server is running on port 5000
 
+Schema for api is
+{
+  "title":"everything do it",
+  "author":"Akshat Mishra",
+  "description":"everyone this is my life strong",
+  "release_date":"05/06/23",
+  "category":"Books"
+}
+
+note:- date can we writen less than or equal to actual date and category are only two Books and Movies.
+
 then you can check the implement of api
 all the api will check through postman application
+
 1. create using POST api.  url:- https://shiny-space-couscous-v6vr7j7px6v52w4w5-5000.app.github.dev/api/feature/create
 2. get single item using GET api.  url:- https://shiny-space-couscous-v6vr7j7px6v52w4w5-5000.app.github.dev/api/feature/single/:id
 3. get all items using GET api.  url:- https://shiny-space-couscous-v6vr7j7px6v52w4w5-5000.app.github.dev/api/feature/getAll
