@@ -28,7 +28,7 @@ export const fetch = async (req, res) => {
     try {
       const books = await Book.find();
       if (books.length === 0) {
-        return res.status(404).json({ message: "Books not found." });
+        return res.status(404).json({ message: "its not found." });
       }
       res.status(200).json(books);
     } catch (error) {
@@ -40,7 +40,7 @@ export const fetch = async (req, res) => {
       const id = req.params.id;
       const book = await Book.findById(id);
       if (!book) {
-        return res.status(404).json({ message: "Book not found." });
+        return res.status(404).json({ message: "its not found." });
       }
       res.status(200).json(book);
     } catch (error) {
@@ -59,7 +59,7 @@ export const fetch = async (req, res) => {
   
       const bookExist = await Book.findById(id);
       if (!bookExist) {
-        return res.status(404).json({ message: "Book not found." });
+        return res.status(404).json({ message: "its not found." });
       }
   
       const updatedBook = await Book.findByIdAndUpdate(id, value, { new: true });
@@ -74,11 +74,11 @@ export const fetch = async (req, res) => {
   
       const bookExist = await Book.findById(id);
       if (!bookExist) {
-        return res.status(404).json({ message: "Book not found." });
+        return res.status(404).json({ message: "its not found." });
       }
   
       await Book.findByIdAndDelete(id);
-      res.status(200).json({ message: "Book deleted successfully." });
+      res.status(200).json({ message: "its deleted successfully." });
     } catch (error) {
       res.status(500).json({ error: "Internal server error." });
     }
@@ -89,7 +89,7 @@ export const fetch = async (req, res) => {
   
       const books = await Book.find({ category });
       if (books.length === 0) {
-        return res.status(404).json({ message: "No books found in this category." });
+        return res.status(404).json({ message: "its not found in this category." });
       }
       res.status(200).json(books);
     } catch (error) {
